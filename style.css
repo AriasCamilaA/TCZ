@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .medium{
-    font-size:2em;
+    font-size:3em;
 }
 
 .small{
@@ -470,9 +470,6 @@ header article p{
     }
 }
 
-
-
-
 /*DIVISION_1*/
 .division_1{
     overflow:hidden;
@@ -631,4 +628,85 @@ header article p{
 
 .first_service{
     align-items: center !important; 
+}
+
+/* PRODUCTS */
+.products_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+/* CARD */
+.products_cards{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.products_cards .card{
+    max-width: 280px;
+}
+
+.card {
+  background: rgb(29 25 35);
+  border-radius: 16px;
+  font-family: "Poppins", sans-serif;
+  z-index: 5;
+}
+
+.card > img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 16px 16px 0 0;
+  filter: contrast(70%);
+  transition: all 0.6s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+
+.card > img:hover {
+  filter: contrast(100%);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  /* padding: 20px 15px 20px; */
+}
+
+.card-content > p {
+  margin-bottom: 10px;
+}
+
+.card-content > p:nth-child(1) {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--primary_dark);
+  align-self: center;
+}
+
+.card-content > p:nth-child(2) {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--lite);
+}
+
+@media (max-width: 900px) {
+  section {
+     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  section {
+     grid-template-columns: repeat(1, 1fr);
+  }
 }
